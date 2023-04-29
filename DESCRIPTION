@@ -15,6 +15,7 @@ Imports:
   shiny,
   yaml
 Suggests:
+  knitr,
   pkgdown,
   testthat
 SystemRequirements: libcurl
