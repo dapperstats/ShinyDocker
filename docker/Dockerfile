@@ -20,3 +20,15 @@ RUN echo "Building $image_name image from $event_sha"
 RUN echo "Installing ShinyDocker from github at ref $event_sha"
 RUN R -e "remotes::install_github('dapperstats/ShinyDocker', ref = '$event_sha')"
 
+
+# dev
+
+# Each image branches for specific run code
+
+FROM tidyverse AS base-branch
+RUN R -e "library(ShinyDocker)"
+
+FROM tidyverse AS app-branch
+RUN R -e "library(ShinyDocker); setup_dir( )"
+
+
