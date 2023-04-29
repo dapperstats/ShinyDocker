@@ -4,13 +4,16 @@
 #
 # See https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae 
 
+# ARG for image name needs to come before FROM
+
+ARG image_name "base"
+
 # built upon the rocker/tidyverse image, which includes remotes and shiny
 
 FROM rocker/tidyverse:latest AS tidyverse
 
 # Build args, default to the base image from the main branch
 
-ARG image_name "base"
 ARG event_sha "HEAD"
 
 RUN echo "Building $image_name image from $event_sha"
