@@ -28,7 +28,8 @@ NULL
 #'
 app_ui <- function (global = global_list(main = ".")) {
 
-  fluidPage(title = "HI HOW ARE YOU?",
+  fluidPage(titlePanel("Hi how are you?"),
+            title = "ShinyDocker",
             theme = app_theme( ))
 
 

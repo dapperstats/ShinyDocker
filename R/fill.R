@@ -49,7 +49,7 @@ fill_app <- function (main = ".") {
   messageq("Setting up local web app instance ... ", quiet = settings$quiet)
 
   app_directory <- system.file(...     = "app", 
-                               package = "portalcasting")
+                               package = "ShinyDocker")
 
   file.copy(from      = list.files(app_directory, full.names = TRUE),
             to        = app_path(main = main),
