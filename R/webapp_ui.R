@@ -7,8 +7,6 @@
 #' @details The UI is hierarchical built as:
 #'   * `app_ui` 
 #'
-#' @param main `character` value of the name of the main component of the directory tree.
-#'
 #' @param global A `list` of global values for the app.
 #'
 #' @return A UI definition, component shiny tags, or bootswatch theme.
@@ -28,7 +26,7 @@ NULL
 #'
 #' @export
 #'
-app_ui <- function (global = global_list( )) {
+app_ui <- function (global = global_list(main = ".")) {
 
   fluidPage(title = "HI HOW ARE YOU?",
             theme = app_theme( ))

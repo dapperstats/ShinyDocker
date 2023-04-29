@@ -22,6 +22,7 @@ If the object is sourced through multiple packages, each package and its version
 }
 \seealso{
 Other utilities: 
+\code{\link{ifnull}()},
 \code{\link{messages}},
 \code{\link{named_null_list}()},
 \code{\link{update_list}()}

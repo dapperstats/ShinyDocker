@@ -15,8 +15,6 @@ directory_configuration_path(main = ".")
 }
 \arguments{
 \item{main}{\code{character} value of the name of the main component of the directory tree.}
-
-\item{dataset}{\code{character} value of name of rodent dataset.}
 }
 \value{
 \code{list} of directory paths or specific \code{character} paths.
@@ -42,6 +40,7 @@ Wrapper functions for specific subdirectories and files include:
 Other orchestration: 
 \code{\link{directory configuration file}},
 \code{\link{directory creation}},
+\code{\link{directory filling}},
 \code{\link{directory settings}}
 }
 \concept{orchestration}

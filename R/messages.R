@@ -27,13 +27,6 @@
 #'
 #' @name messages
 #'
-#' @examples 
-#'    messageq("hi ", "how are you?")
-#'    messageq("hi ", "how are you?", quiet = TRUE)
-#'    break_line( )
-#'    break_lines( )
-#'    castle( )
-#'
 NULL
 
 #' @rdname messages

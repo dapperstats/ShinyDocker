@@ -51,6 +51,7 @@ Most users will not want or need to change the directory folders and file names,
 Other orchestration: 
 \code{\link{directory configuration file}},
 \code{\link{directory creation}},
+\code{\link{directory filling}},
 \code{\link{directory paths}}
 }
 \concept{customization}

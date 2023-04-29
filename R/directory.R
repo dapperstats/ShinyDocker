@@ -226,8 +226,6 @@ read_directory_settings <- function (main = ".") {
 #'
 #' @param main `character` value of the name of the main component of the directory tree. 
 #'
-#' @param dataset `character` value of name of rodent dataset.
-#'
 #' @return `list` of directory paths or specific `character` paths.
 #'
 #' @name directory paths

@@ -1,7 +1,5 @@
 
 #' @title Generate the Server Code for the Web App
-#' 
-#' @param main `character` value of the name of the main component of the directory tree.
 #'
 #' @param rv [`reactiveValues`][shiny::reactiveValues] `list` for the UI.
 #'
@@ -9,11 +7,7 @@
 #'
 #' @param output `output` `list` for the UI.
 #'
-#' @param event `character` value of the server event. \cr
-#'
 #' @param session Environment for the UI.
-#'
-#' @param global A `list` of global values for the app.
 #'
 #' @return `app_server`: an observer reference class object (see [`observeEvent`][shiny::observeEvent] and [`observe`][shiny::observe]). \cr
 #'         `initial_reactive_values`: a [`reactiveValues`][shiny::reactiveValues] `list`. \cr
@@ -25,22 +19,6 @@
 #'
 #' @name app server
 #'
-#' @examples
-#' \dontrun{
-#'    main1 <- file.path(tempdir(), "app")
-#'    setup_dir(main = main1)
-#'
-#'    global <- global_list(main = main1)
-#'  
-#'    rv     <- initial_reavtive_values(global = global)
-#'
-#'    output <- initial_output(main   = main1,
-#'                             global = global,
-#'                             rv     = rv,
-#'                             output = list())
-#'
-#'    unlink(main1, recursive = TRUE)
-#'  }
 #'
 NULL
 
@@ -53,11 +31,9 @@ app_server <- function (input,
                         output, 
                         session) {
 
-  rv     <- initial_reactive_values(global = global)
+  rv     <- initial_reactive_values( )
 
-  output <- initial_output(main   = main,
-                           global = global,
-                           rv     = rv, 
+  output <- initial_output(rv     = rv, 
                            output = output)
 
 }
@@ -67,7 +43,7 @@ app_server <- function (input,
 #'
 #' @export
 #'
-initial_reactive_values <- function (global = global_list( )) {
+initial_reactive_values <- function ( ) {
 
   reactiveValues( )
   
@@ -78,9 +54,7 @@ initial_reactive_values <- function (global = global_list( )) {
 #'
 #' @export
 #'
-initial_output <- function (main = ".",
-                            global,
-                            rv, 
+initial_output <- function (rv, 
                             output) {
 
   output 

@@ -12,9 +12,9 @@
 \usage{
 app_server(input, output, session)
 
-initial_reactive_values(global = global_list())
+initial_reactive_values()
 
-initial_output(main = ".", global, rv, output)
+initial_output(rv, output)
 }
 \arguments{
 \item{input}{\code{input} \code{list} for the UI.}
@@ -23,13 +23,7 @@ initial_output(main = ".", global, rv, output)
 
 \item{session}{Environment for the UI.}
 
-\item{global}{A \code{list} of global values for the app.}
-
-\item{main}{\code{character} value of the name of the main component of the directory tree.}
-
 \item{rv}{\code{\link[shiny:reactiveValues]{reactiveValues}} \code{list} for the UI.}
-
-\item{event}{\code{character} value of the server event. \cr}
 }
 \value{
 \code{app_server}: an observer reference class object (see \code{\link[shiny:observeEvent]{observeEvent}} and \code{\link[shiny:observe]{observe}}). \cr
@@ -38,24 +32,6 @@ initial_output(main = ".", global, rv, output)
 }
 \description{
 Generate the Server Code for the Web App
-}
-\examples{
-\dontrun{
-   main1 <- file.path(tempdir(), "app")
-   setup_dir(main = main1)
-
-   global <- global_list(main = main1)
- 
-   rv     <- initial_reavtive_values(global = global)
-
-   output <- initial_output(main   = main1,
-                            global = global,
-                            rv     = rv,
-                            output = list())
-
-   unlink(main1, recursive = TRUE)
- }
-
 }
 \seealso{
 Other shinyapp: 

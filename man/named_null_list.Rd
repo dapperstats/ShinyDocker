@@ -21,6 +21,7 @@ Produces a list with \code{NULL} for each element named according to \code{eleme
 }
 \seealso{
 Other utilities: 
+\code{\link{ifnull}()},
 \code{\link{messages}},
 \code{\link{package_version_finder}()},
 \code{\link{update_list}()}

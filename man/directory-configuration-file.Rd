@@ -43,6 +43,7 @@ The directory configuration file is a special file within the directory setup an
 \seealso{
 Other orchestration: 
 \code{\link{directory creation}},
+\code{\link{directory filling}},
 \code{\link{directory paths}},
 \code{\link{directory settings}}
 }

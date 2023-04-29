@@ -39,16 +39,9 @@ Create messages for use in the pipeline. \cr \cr
 \code{break_line}: Creates a horizontal line of characters ending with a newline call for messages. \cr
 \code{break_lines}: Creates a set of horizontal line of characters ending with a newline call for messages.
 }
-\examples{
-   messageq("hi ", "how are you?")
-   messageq("hi ", "how are you?", quiet = TRUE)
-   break_line( )
-   break_lines( )
-   castle( )
-
-}
 \seealso{
 Other utilities: 
+\code{\link{ifnull}()},
 \code{\link{named_null_list}()},
 \code{\link{package_version_finder}()},
 \code{\link{update_list}()}

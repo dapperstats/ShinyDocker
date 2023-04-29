@@ -26,6 +26,7 @@ Update a list with new values for elements
 }
 \seealso{
 Other utilities: 
+\code{\link{ifnull}()},
 \code{\link{messages}},
 \code{\link{named_null_list}()},
 \code{\link{package_version_finder}()}

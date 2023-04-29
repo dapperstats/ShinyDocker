@@ -11,6 +11,7 @@ BugReports: https://github.com/dapperstats/ShinyDocker/issues
 Depends: 
   R (>= 4.2.0)
 Imports:
+  bslib,
   rsconnect,
   shiny,
   yaml
