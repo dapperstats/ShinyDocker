@@ -8,7 +8,6 @@
 # See https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
 
 ARG image_name "base"
-RUN echo "Building $image_name image"
 
 # built upon the rocker/tidyverse image, which includes remotes and shiny
 
