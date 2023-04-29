@@ -1,0 +1,12 @@
+Package: ShinyDocker
+Title: R Package Shiny App in Docker
+Version: 0.0.1
+Authors@R: 
+    person("Juniper L.", "Simonis", , "simonis@dapperstats.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9798-0460"))
+Description: Toy example package with a shiny app that is dockerized and
+    served.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
