@@ -31,4 +31,4 @@ RUN R -e "library(ShinyDocker)"
 FROM tidyverse AS app-branch
 RUN R -e "library(ShinyDocker); setup_dir( )"
 
-
+FROM ${image_name}-branch AS final
