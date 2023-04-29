@@ -26,10 +26,10 @@ RUN R -e "remotes::install_github('dapperstats/ShinyDocker', ref = '$event_sha')
 # Each image branches for specific run code
 
 FROM tidyverse AS base-branch
+RUN R -e "library(ShinyDocker)"
 
 FROM tidyverse AS app-branch
 RUN R -e "library(ShinyDocker); setup_dir( )"
-EXPOSE 3838
-CMD ["R", "-e", "print(1312)"]
+
 
 FROM ${image_name}-branch AS final
