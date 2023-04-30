@@ -51,7 +51,7 @@ deploy_app <- function(main = ".") {
                  secret = Sys.getenv("SHINY_SECRET"),
                  server = "shinyapps.io")
 
-  deployApp(appDir = app_path(main = main), forceUpdate = TRUE)
+  deployApp(appDir = app_path(main = main), forceUpdate = TRUE, appName = "ShinyDocker")
 
 }
 
