@@ -86,10 +86,9 @@ jobs:
             "image_name=${{ matrix.image_name }}"
 
       - name: Deploy app
-        if: ${{ matrix.image_name == 'app' }}
-        container: dapperstats/ShinyDocker:app_latest
+        if: ${{ matrix.image_name == 'app' }}        
         run: |
-           print(123)
-        shell: Rscript {0}
+           docker run --rm dapperstats/ShinyDocker:app_latest
+
         
         
