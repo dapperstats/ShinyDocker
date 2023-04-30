@@ -84,14 +84,13 @@ jobs:
           build-args: |
             "event_sha=${{ github.sha }}"
             "image_name=${{ matrix.image_name }}"
+            "SHINY_ACCOUNT=${{ secrets.SHINY_ACCOUNT }}"
+            "SHINY_TOKEN=${{ secrets.SHINY_TOKEN }}"
+            "SHINY_SECRET=${{ secrets.SHINY_SECRET }}"
 
       - name: Deploy app
         if: ${{ matrix.image_name == 'app' }}        
         run: |
            docker run --rm dapperstats/shinydocker:app_latest
-        env: 
-          SHINY_ACCOUNT: ${{ secrets.SHINY_ACCOUNT }}
-          SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
-          SHINY_SECRET: ${{ secrets.SHINY_SECRET }}
         
         
