@@ -89,6 +89,7 @@ jobs:
         if: ${{ matrix.image_name == 'app' }}        
         run: |
            docker run --rm dapperstats/shinydocker:app_latest
-
+        env: 
+          SHINY_ACCOUNT: ${{ secrets.SHINY_ACCOUNT }}
         
         

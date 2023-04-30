@@ -15,6 +15,11 @@ ARG image_name "base"
 
 FROM rocker/tidyverse:latest AS tidyverse
 
+# set env vars
+
+ARG SHINY_ACOUNT=default
+ENV SHINY_ACOUNT=$SHINY_ACOUNT
+
 # Build args, default to the base image from the main branch
 
 ARG event_sha "HEAD"
@@ -30,6 +35,7 @@ FROM tidyverse AS base-branch
 
 
 FROM tidyverse AS app-branch
+
 RUN R -e "library(ShinyDocker); setup_dir( )"
 CMD ["R", "-e", "ShinyDocker::deploy_app()"]
 
