@@ -45,7 +45,7 @@ run_app <- function(main = ".") {
 #' @export
 #'
 deploy_app <- function(main = ".") {
-print(Sys.gentenv("SHINY_ACCOUNT"))
+print(Sys.getenv("SHINY_ACCOUNT"))
 
 #  setAccountInfo(name   = Sys.getenv("SHINY_ACCOUNT"),
 #                 token  = Sys.getenv("SHINY_TOKEN"),
