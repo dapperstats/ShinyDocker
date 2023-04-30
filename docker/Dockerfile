@@ -31,7 +31,7 @@ FROM tidyverse AS base-branch
 
 FROM tidyverse AS app-branch
 RUN R -e "library(ShinyDocker); setup_dir( )"
-CMD ["R", "-e", "file.exists(ShinyDocker::app_path())"]
+CMD ["R", "-e", "ShinyDocker::deploy_app()"]
 
 # Bring the branches together
 
