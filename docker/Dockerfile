@@ -25,6 +25,9 @@ ENV SHINY_ACCOUNT=$SHINY_ACCOUNT
 ENV SHINY_TOKEN=$SHINY_TOKEN
 ENV SHINY_SECRET=$SHINY_SECRET
 
+RUN echo "SHINY ACCOUNT $SHINY_ACCOUNT"
+
+
 # Build args, default to the base image from the main branch
 
 ARG event_sha "HEAD"
