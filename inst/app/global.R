@@ -1,4 +1,3 @@
-global <- ShinyDocker::global_list(main = main)
 main_exists <- any(ls() == "main")
 
 if (main_exists) {
