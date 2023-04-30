@@ -17,8 +17,8 @@ FROM rocker/tidyverse:latest AS tidyverse
 
 # set env vars
 
-ARG SHINY_ACOUNT=default
-ENV SHINY_ACOUNT=$SHINY_ACOUNT
+ARG SHINY_ACCOUNT=default
+ENV SHINY_ACCOUNT=$SHINY_ACCOUNT
 
 # Build args, default to the base image from the main branch
 
