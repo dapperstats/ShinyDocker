@@ -73,6 +73,7 @@ jobs:
             type=semver,pattern={{raw}},prefix=${{ matrix.tag_prefix }}  
 
       - name: Build and push ${{ matrix.image_name }} image
+        id: ${{ matrix.image_name }}_push
         uses: docker/build-push-action@v4
         with:
           context: .
@@ -85,6 +86,7 @@ jobs:
             "image_name=${{ matrix.image_name }}"
 
       - name: Deploy app
+        needs: app_push
         if: ${{ matrix.image_name == 'app' }}
         run: |
            print(123)
