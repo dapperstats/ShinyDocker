@@ -2,10 +2,12 @@
 #  base: the complete software system is installed, non executable
 #  app:  executable app
 #
-# See https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae 
-
-# ARG for image name needs to come before FROM so it can be used in a FROM at the end
-# See https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+#   See https://medium.com/@tonistiigi/advanced-multi-stage-build-patterns-6f741b852fae 
+#
+# Note that ARG for image name needs to come before any FROM so it can be used in a FROM at the end
+#
+#   See https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+#
 
 ARG image_name "base"
 
@@ -17,7 +19,7 @@ FROM rocker/tidyverse:latest AS tidyverse
 
 ARG event_sha "HEAD"
 
-# Install ShinyDocker from github
+# Install ShinyDocker from github event that is triggering the build
 
 RUN echo "Installing ShinyDocker from github at ref $event_sha"
 RUN R -e "remotes::install_github('dapperstats/ShinyDocker', ref = '$event_sha')"
@@ -30,6 +32,7 @@ FROM tidyverse AS base-branch
 FROM tidyverse AS app-branch
 RUN R -e "library(ShinyDocker); setup_dir( )"
 CMD ["R", "-e", "library(ShinyDocker); deploy_app( )"]
+
 
 # Bring the branches together
 
