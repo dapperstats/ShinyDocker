@@ -4,10 +4,13 @@
 \alias{app}
 \alias{web-app}
 \alias{run_app}
+\alias{deploy_app}
 \alias{global_list}
 \title{Build and Launch the Web Application}
 \usage{
 run_app(main = ".")
+
+deploy_app(main = ".")
 
 global_list(main = ".")
 }

@@ -40,6 +40,16 @@ run_app <- function(main = ".") {
 
 }
 
+#' @rdname app
+#'
+#' @export
+#'
+deploy_app <- function(main = ".") {
+
+  deployApp(appDir = app_path(main = main))
+
+}
+
 
 #' @rdname app
 #'
