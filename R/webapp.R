@@ -52,7 +52,7 @@ print(Sys.getenv("SHINY_ACCOUNT"))
 #                 secret = Sys.getenv("SHINY_SECRET"),
 #                 server = "shinyapps.io")
 
-  deployApp(appDir = app_path(main = main))
+#  deployApp(appDir = app_path(main = main))
 
 }
 
