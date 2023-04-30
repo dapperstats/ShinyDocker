@@ -1,2 +1,2 @@
 
-app_server
+ShinyDocker::app_server
