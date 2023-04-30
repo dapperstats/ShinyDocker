@@ -45,11 +45,12 @@ run_app <- function(main = ".") {
 #' @export
 #'
 deploy_app <- function(main = ".") {
+print(Sys.gentenv("SHINY_ACCOUNT"))
 
-  setAccountInfo(name   = Sys.getenv("SHINY_ACCOUNT"),
-                 token  = Sys.getenv("SHINY_TOKEN"),
-                 secret = Sys.getenv("SHINY_SECRET"),
-                 server = "shinyapps.io")
+#  setAccountInfo(name   = Sys.getenv("SHINY_ACCOUNT"),
+#                 token  = Sys.getenv("SHINY_TOKEN"),
+#                 secret = Sys.getenv("SHINY_SECRET"),
+#                 server = "shinyapps.io")
 
   deployApp(appDir = app_path(main = main))
 
