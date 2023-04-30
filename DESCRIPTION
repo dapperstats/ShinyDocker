@@ -1,0 +1,26 @@
+Package: ShinyDocker
+Title: R Package Shiny App in Docker
+Version: 0.0.1
+Authors@R: c(
+      person(c("Juniper", "L."), "Simonis", email = "simonis@dapperstats.com", role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0001-9798-0460")))
+Description: Toy example package with a shiny app that is dockerized and served.
+License: GPL (>= 3)
+URL: https://dapperstats.github.io/ShinyDocker/, https://github.com/dapperstats/ShinyDocker
+BugReports: https://github.com/dapperstats/ShinyDocker/issues
+Depends: 
+  R (>= 4.2.0)
+Imports:
+  bslib,
+  rsconnect,
+  shiny,
+  yaml
+Suggests:
+  knitr,
+  pkgdown,
+  testthat
+SystemRequirements: libcurl
+RoxygenNote: 7.2.3
+VignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
