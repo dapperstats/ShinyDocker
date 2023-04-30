@@ -1,3 +1,5 @@
+print(ShinyDocker::directory_settings())
+
 main_exists <- any(ls() == "main")
 
 if (main_exists) {
