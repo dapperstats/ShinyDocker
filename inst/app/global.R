@@ -1,3 +1,4 @@
+stop(1234)
 main_exists <- any(ls() == "main")
 
 if (main_exists) {
