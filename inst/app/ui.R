@@ -1,2 +1,2 @@
 
-app_ui(global = global)
+app_ui( )

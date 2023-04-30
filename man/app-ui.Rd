@@ -9,12 +9,9 @@
 \alias{app_theme}
 \title{Generate the User Interface for the Web App}
 \usage{
-app_ui(global = global_list(main = "."))
+app_ui()
 
 app_theme()
-}
-\arguments{
-\item{global}{A \code{list} of global values for the app.}
 }
 \value{
 A UI definition, component shiny tags, or bootswatch theme.

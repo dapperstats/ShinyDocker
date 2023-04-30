@@ -1,4 +1,3 @@
-stop(1234)
 main_exists <- any(ls() == "main")
 
 if (main_exists) {
@@ -7,7 +6,6 @@ if (main_exists) {
 
 main   <- ".."
 
-global <- global_list(main = main)
 
 onStop(function( ) {
   rm(main, inherits = TRUE)

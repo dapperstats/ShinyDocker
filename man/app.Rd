@@ -25,21 +25,6 @@ global_list(main = ".")
 \code{run_app} constructs and launches a local version of the web application by running \code{\link[shiny:runApp]{shiny::runApp}} pointed to the \code{app} subdirectory.
 \code{global_list} creates a list of values that are globally available in an app run.
 }
-\examples{
-\dontrun{
-   main1 <- file.path(tempdir(), "app")
-   setup_dir(main = main1)
-
-   global_list(main = main1)
-
-   if (getShinyOption("shiny.launch.browser")) {
-     run_app(main = main1)
-   }
-
-   unlink(main1, recursive = TRUE)
- }
-
-}
 \seealso{
 Other shinyapp: 
 \code{\link{app server}},

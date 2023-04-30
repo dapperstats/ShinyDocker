@@ -14,20 +14,6 @@
 #'
 #' @aliases web-app app
 #'
-#' @examples
-#' \dontrun{
-#'    main1 <- file.path(tempdir(), "app")
-#'    setup_dir(main = main1)
-#'
-#'    global_list(main = main1)
-#'
-#'    if (getShinyOption("shiny.launch.browser")) {
-#'      run_app(main = main1)
-#'    }
-#'
-#'    unlink(main1, recursive = TRUE)
-#'  }
-#'
 NULL
 
 #' @rdname app

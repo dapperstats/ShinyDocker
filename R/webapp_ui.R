@@ -7,8 +7,6 @@
 #' @details The UI is hierarchical built as:
 #'   * `app_ui` 
 #'
-#' @param global A `list` of global values for the app.
-#'
 #' @return A UI definition, component shiny tags, or bootswatch theme.
 #'
 #' @family shinyapp
@@ -26,7 +24,7 @@ NULL
 #'
 #' @export
 #'
-app_ui <- function (global = global_list(main = ".")) {
+app_ui <- function ( ) {
 
   fluidPage(titlePanel("Hi how are you?"),
             title = "ShinyDocker",
