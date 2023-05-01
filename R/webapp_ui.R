@@ -26,7 +26,7 @@ NULL
 #'
 app_ui <- function ( ) {
 
-  fluidPage(titlePanel("Hi, how are you?"),
+  fluidPage(titlePanel("Hi, how are you? -DJ"),
             title = "ShinyDocker",
             theme = app_theme( ))
 
