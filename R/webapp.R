@@ -39,8 +39,7 @@ deploy_app <- function(main = ".") {
 
   deployApp(appDir      = app_path(main = main), 
             forceUpdate = TRUE, 
-            appName     = "ShinyDocker",
-            image       = "dapperstats/shinydocker")
+            appName     = "ShinyDocker")
 
 }
 
