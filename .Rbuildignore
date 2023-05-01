@@ -12,7 +12,7 @@
 ^inst/WORDLIST$
 ^codecov\.yml$
 ^docs$
-^docker$
+Dockerfile
 ^\.github$
 ^pkgdown$
 ^codemeta\.json$
