@@ -36,11 +36,6 @@ deploy_app <- function(main = ".") {
                  token  = Sys.getenv("SHINY_TOKEN"),
                  secret = Sys.getenv("SHINY_SECRET"),
                  server = "shinyapps.io")
-messageq(break_lines(5))
-print(list.files())
-messageq(break_lines())
-print(list.files(".."))
-
 
   deployApp(appDir = app_path(main = main), forceUpdate = TRUE, appName = "ShinyDocker")
 
