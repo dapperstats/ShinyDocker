@@ -88,6 +88,4 @@ jobs:
         if: ${{ matrix.image_name == 'app' }}
 #        if: ${{ matrix.image_name == 'app' && github.event_name == 'release'}}        
         run: |
-           docker run -e "SHINY_ACCOUNT=${{ secrets.SHINY_ACCOUNT }}" --rm dapperstats/shinydocker:app_latest 
-
-#           -e "SHINY_TOKEN=${{ secrets.SHINY_TOKEN }}" -e "SHINY_SECRET=${{ secrets.SHINY_SECRET }}"
+           docker run -e "SHINY_ACCOUNT=${{ secrets.SHINY_ACCOUNT }}" -e "SHINY_TOKEN=${{ secrets.SHINY_TOKEN }}" -e "SHINY_SECRET=${{ secrets.SHINY_SECRET }}" --rm dapperstats/shinydocker:app_latest         
