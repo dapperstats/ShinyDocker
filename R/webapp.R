@@ -38,6 +38,7 @@ deploy_app <- function(main = ".") {
                  server = "shinyapps.io")
 
   deployApp(appDir      = app_path(main = main), 
+            appFiles    = "..",
             forceUpdate = TRUE, 
             appName     = "ShinyDocker")
 
