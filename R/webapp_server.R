@@ -36,6 +36,11 @@ app_server <- function (input,
   output <- initial_output(rv     = rv, 
                            output = output)
 
+messageq(break_lines(5))
+print(list.files())
+messageq(break_lines())
+print(list.files(".."))
+
 }
 
 

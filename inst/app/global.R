@@ -6,7 +6,6 @@ if (main_exists) {
 
 main   <- ".."
 
-
 onStop(function( ) {
   rm(main, inherits = TRUE)
   if (main_exists) {
